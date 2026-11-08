@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Product Performance – Wide World Importers</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#12261f;--mute:#5b6f66;--line:#d5e0db;--g:#0b4f3f;--g2:#5fa28f;--bad:#b42318;--gold:#b7791f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1815;--card:#16241f;--ink:#e6f0ec;--mute:#9bb0a7;--line:#2a3d36;--g:#5fc4a7;--g2:#3f8a76;--bad:#f0826f;--gold:#e0b35a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1815;--card:#16241f;--ink:#e6f0ec;--mute:#9bb0a7;--line:#2a3d36;--g:#5fc4a7;--g2:#3f8a76;--bad:#f0826f;--gold:#e0b35a;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 48px}
+h1{font:700 30px/1.15 Georgia,"Iowan Old Style",Palatino,serif;margin:0 0 6px;letter-spacing:-.01em}
+h2{font:700 18px/1.25 Georgia,"Iowan Old Style",Palatino,serif;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 22px;max-width:70ch}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font:700 26px/1.1 Georgia,serif;color:var(--g)}
+.kpi span{color:var(--mute);font-size:13px}
+.kpi.bad b{color:var(--bad)}
+.grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;min-width:0}
+.card p.n{color:var(--mute);font-size:13px;margin:0 0 10px}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--mute);font:11px system-ui,sans-serif}
+.pb{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:13px}
+.pb i{display:block;height:18px;border-radius:3px;background:var(--g)}
+.pb .t{width:92px;flex:none}.pb .bar{flex:1;background:var(--line);border-radius:3px}.pb .v{width:40px;text-align:right;font-weight:600}
+.wide{margin-top:14px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}th{color:var(--mute);font-weight:600}
+td.bad{color:var(--bad);font-weight:600}td.good{color:var(--g);font-weight:600}
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:6px}
+.rec div{border-left:3px solid var(--g);padding:2px 0 2px 12px;font-size:14px}
+.rec div.r{border-color:var(--bad)}.rec div.y{border-color:var(--gold)}
+.rec b{display:block;margin-bottom:2px}
+.foot{color:var(--mute);font-size:12.5px;margin-top:18px;max-width:80ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Which products earn their place?</h1>
+<p class="sub">Product performance for Wide World Importers, January 2013 to May 2016. Sales are shown before tax. The aim is to show which products to protect, reprice, or review, not just what sold.</p>
+
+<div class="kpis">
+<div class="kpi"><b>$19.9M</b><span>Sales across 227 products</span></div>
+<div class="kpi"><b>49.9%</b><span>Overall profit margin</span></div>
+<div class="kpi"><b>33%</b><span>of sales come from the top 10 products</span></div>
+<div class="kpi bad"><b>90%</b><span>of all losses come from 5 products</span></div>
+</div>
+
+<div class="grid">
+<div class="card">
+<h2>Sales vs. margin, top 40 products</h2>
+<p class="n">Each dot is a product. Far right means high sales; high up means high margin.</p>
+<svg id="sc" viewBox="0 0 620 330" role="img" aria-label="Scatter chart of product sales against profit margin"></svg>
+</div>
+<div class="card">
+<h2>How concentrated are sales?</h2>
+<p class="n">Smallest group of products needed to reach each share of sales.</p>
+<div class="pb"><span class="t">10 products</span><span class="bar"><i style="width:33%"></i></span><span class="v">33%</span></div>
+<div class="pb"><span class="t">27 products</span><span class="bar"><i style="width:50%"></i></span><span class="v">50%</span></div>
+<div class="pb"><span class="t">68 products</span><span class="bar"><i style="width:80%"></i></span><span class="v">80%</span></div>
+<div class="pb"><span class="t">227 products</span><span class="bar"><i style="width:100%"></i></span><span class="v">100%</span></div>
+<p class="n" style="margin-top:14px">About 30% of the range delivers 80% of sales. The rest is a long tail.</p>
+</div>
+</div>
+
+<div class="card wide">
+<h2>Top 6 products by sales</h2>
+<p class="n">Sales and margin side by side show which top sellers are also profitable.</p>
+<div class="scroll"><table>
+<tr><th>Product</th><th>Sales</th><th>Profit</th><th>Margin</th></tr>
+<tr><td>Air cushion machine (Blue)</td><td>$1.20M</td><td>$0.48M</td><td class="bad">40%</td></tr>
+<tr><td>10 mm Anti static bubble wrap (Blue) 50m</td><td>$0.87M</td><td>$0.47M</td><td>55%</td></tr>
+<tr><td>20 mm Double sided bubble wrap 50m</td><td>$0.79M</td><td>$0.67M</td><td class="good">85%</td></tr>
+<tr><td>32 mm Double sided bubble wrap 50m</td><td>$0.77M</td><td>$0.36M</td><td>47%</td></tr>
+<tr><td>32 mm Anti static bubble wrap (Blue) 50m</td><td>$0.63M</td><td>$0.35M</td><td>55%</td></tr>
+<tr><td>10 mm Double sided bubble wrap 50m</td><td>$0.61M</td><td>$0.28M</td><td>47%</td></tr>
+</table></div>
+</div>
+
+<div class="card wide">
+<h2>What I would do next</h2>
+<div class="rec">
+<div class="r"><b>Review the Halloween zombie masks</b>They sell well ($130K–$162K per size) but lose about 6% on every sale. The four sizes lost about $33K together. Check whether this was a clearance discount or a pricing error.</div>
+<div class="y"><b>Reprice or renegotiate the air cushion machine</b>It is the top seller but has the lowest margin of the top five (40%). A small price rise here moves total profit more than anywhere else.</div>
+<div><b>Learn from the 20 mm double-sided wrap</b>It earns 85% margin, while the 10 mm and 32 mm versions of the same product earn 47%. Find out whether price or cost explains the gap.</div>
+</div>
+</div>
+
+<p class="foot">Source: FactSale and DimStockItem tables, cleaned in Excel. Losses are small overall ($40.5K against $9.9M profit) but concentrated, which is why they are easy to fix. Margin = profit ÷ sales excluding tax. This page was built as a design example of a product-focused view.</p>
+</div>
+<script>
+// [sales in $K, margin %] for the 40 best-selling products
+var D=[[1198,40],[866,54.5],[791,85.2],[769,47.3],[631,55.2],[606,46.7],[588,46.1],[406,48],[360,52.1],[310,53.3],[304,45.2],[264,52],[264,62.2],[223,40.6],[219,46.9],[216,46.9],[215,53.3],[207,54.5],[200,50],[194,36],[190,62],[188,45.6],[187,34.6],[181,45.6],[177,58.6],[169,37],[165,54.2],[164,61.1],[162,-5.6],[160,-5.6],[159,58.3],[157,61.1],[157,58.3],[157,37],[155,61.1],[154,61.1],[154,52.8],[154,61.1],[153,58.3],[152,37]];
+var L={0:"Air cushion machine",2:"20 mm double-sided wrap",28:"Halloween masks"};
+var W=620,H=330,l=46,r=16,t=14,b=38,xm=1300,ymin=-20,ymax=100;
+function X(v){return l+(v/xm)*(W-l-r)}function Y(v){return t+(ymax-v)/(ymax-ymin)*(H-t-b)}
+var s="";
+[0,25,50,75,100].forEach(function(v){s+='<line x1="'+l+'" x2="'+(W-r)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="'+(l-6)+'" y="'+(Y(v)+4)+'" text-anchor="end">'+v+'%</text>'});
+s+='<line x1="'+l+'" x2="'+(W-r)+'" y1="'+Y(0)+'" y2="'+Y(0)+'" stroke="var(--bad)" stroke-dasharray="4 3"/>';
+[0,400,800,1200].forEach(function(v){s+='<text x="'+X(v)+'" y="'+(H-20)+'" text-anchor="middle">$'+(v/1000).toFixed(1)+'M</text>'});
+s+='<text x="'+((W+l)/2)+'" y="'+(H-4)+'" text-anchor="middle">Sales per product</text>';
+D.forEach(function(p,i){var bad=p[1]<0,hi=i in L;var c=bad?"var(--bad)":(i==0?"var(--gold)":"var(--g)");
+s+='<circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="'+(hi?7:5)+'" fill="'+c+'" fill-opacity="'+(hi?1:.6)+'"><title>$'+p[0]+'K sales, '+p[1]+'% margin</title></circle>'});
+s+='<text x="'+(X(1198)-10)+'" y="'+(Y(40)-12)+'" text-anchor="end" style="fill:var(--ink)">Air cushion machine</text>';
+s+='<text x="'+(X(791)+11)+'" y="'+(Y(85.2)+4)+'" style="fill:var(--ink)">20 mm double-sided wrap</text>';
+s+='<text x="'+(X(162)+12)+'" y="'+(Y(-5.6)-10)+'" style="fill:var(--bad)">Halloween masks lose money</text>';
+document.getElementById("sc").innerHTML=s;
+</script>
+</body>
+</html>
