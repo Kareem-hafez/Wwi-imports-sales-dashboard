@@ -94,28 +94,8 @@ Based on the findings:
 
 ### Product Analysis
 
-![Product Analysis](screenshots/product-analysis.png)
+![Wwi-imports-sales-dashboard](WwiDashboard.png)
 
-## Repository Structure
-
-```text
-wwi-product-analysis/
-│
-├── README.md
-│
-├── screenshots/
-│   ├── overview.png
-│   └── product-analysis.png
-│
-├── powerbi/
-│   └── dashboard.pbix
-│
-├── docs/
-│   └── cleaning-log.md
-│
-└── data/
-    └── README.md
-```
 
 ## Limitations
 
