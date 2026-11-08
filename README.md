@@ -90,7 +90,7 @@ Based on the findings:
 
 ### Sales Overview
 
-![Sales Overview](screenshots/overview.png)
+![Wwi-imports-sales-dashboard](OverviewDashboard.png)
 
 ### Product Analysis
 
